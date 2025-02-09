@@ -2,7 +2,7 @@
 
 namespace AccesoDatos
 {
-    public class TipoVidejuegoAD
+    public class TipoVideojuegoAD
     {
         private Arreglo<TipoVideojuegoEntidad> Videjuegos = new(10);
 
