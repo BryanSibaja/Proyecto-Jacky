@@ -34,7 +34,7 @@ namespace Presentacion
 
         private void LimpiarCampos()
         {
-            IdNumericUpDown.Value = 1;
+            IdNumericUpDown.Value = 0;
             NombreTextBox.Clear();
             DescripcionTextBox.Clear();
         }

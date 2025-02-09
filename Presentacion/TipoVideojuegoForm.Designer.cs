@@ -52,11 +52,9 @@
             IdNumericUpDown.AutoSize = true;
             IdNumericUpDown.Location = new Point(12, 27);
             IdNumericUpDown.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            IdNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             IdNumericUpDown.Name = "IdNumericUpDown";
             IdNumericUpDown.Size = new Size(120, 23);
             IdNumericUpDown.TabIndex = 1;
-            IdNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label1
             // 
