@@ -1,5 +1,5 @@
 ﻿using Entidades;
-using AccesoDatos
+using AccesoDatos;
 
 namespace LogicaNegocio
 {
@@ -12,7 +12,9 @@ namespace LogicaNegocio
             {
                 throw new ArgumentException("El videojuego ya existe");
             }
-            
+
+            ValidarVideojuego(videojuego);
+
             AccesoDatos.AgregarVideojuego(videojuego);
         }
         public VideojuegoEntidad[] ObtenerVideojuegos()
