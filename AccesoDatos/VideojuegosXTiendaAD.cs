@@ -11,7 +11,7 @@ namespace AccesoDatos
         }
         public VideojuegosXTiendaEntidad[] ObtenerVideojuegoXTiendas()
         {
-            return videojuegoXTiendas.Valores;
+            return videojuegoXTiendas.Valores.Where(v => v != null).ToArray(); ;
         }
     }
 }

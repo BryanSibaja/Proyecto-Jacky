@@ -13,7 +13,7 @@ namespace AccesoDatos
 
         public VideojuegoEntidad[] ObtenerVideojuegos()
         {
-            return Videojuegos.Valores;
+            return Videojuegos.Valores.Where(v => v != null).ToArray(); ;
         }
     }
 }

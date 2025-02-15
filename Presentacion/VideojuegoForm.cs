@@ -12,7 +12,7 @@ namespace Presentacion
             InitializeComponent();
             this.videojuegoLN = videojuegoLN;
             TipoVideojuegoComboBox.DataSource = tipoVideojuegoLN.ObtenerTipoVideojuegos();
-            FisicoComboBox.DataSource = FisicoComboBoxItem.ObtenerFisicoComboBoxItems();
+            FisicoComboBox.DataSource = BoolComboBoxItem.ObtenerItems();
         }
 
         private void RegistrarButton_Click(object sender, EventArgs e)
@@ -41,12 +41,23 @@ namespace Presentacion
                     Fisico = (bool)FisicoComboBox.SelectedValue
                 };
                 videojuegoLN.AgregarVideojuego(videojuego);
-                MessageBox.Show("Videojuego registrado correctamente");
+                Limpiar();
+                MessageBox.Show("Videojuego registrado correctamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Limpiar()
+        {
+            IdNumericUpDown.Value = 0;
+            NombreTextBox.Text = "";
+            TipoVideojuegoComboBox.SelectedIndex = -1;
+            DesarrolladorTextBox.Text = "";
+            LanzamientoNumericUpDown.Value = 1970;
+            FisicoComboBox.SelectedIndex = -1;
         }
     }
 }

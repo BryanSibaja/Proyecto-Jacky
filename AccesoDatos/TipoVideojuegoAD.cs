@@ -13,7 +13,7 @@ namespace AccesoDatos
 
         public TipoVideojuegoEntidad[] ObtenerTipoVideojuegos()
         {
-            return Videjuegos.Valores;
+            return Videjuegos.Valores.Where(v => v != null).ToArray();
         }
     }
 }

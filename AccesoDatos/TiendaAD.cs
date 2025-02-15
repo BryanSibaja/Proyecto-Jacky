@@ -13,7 +13,7 @@ namespace AccesoDatos
 
         public TiendaEntidad[] ObtenerTiendas()
         {
-            return tiendas.Valores;
+            return tiendas.Valores.Where(v => v != null).ToArray(); ;
         }
     }
 }

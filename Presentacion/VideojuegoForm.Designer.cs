@@ -41,13 +41,13 @@
             label4 = new Label();
             LanzamientoNumericUpDown = new NumericUpDown();
             FisicoComboBox = new ComboBox();
-            comboBoxItemBindingSource = new BindingSource(components);
             label5 = new Label();
             RegistrarButton = new Button();
+            boolComboBoxItemBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)IdNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tipoVideojuegoEntidadBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LanzamientoNumericUpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)comboBoxItemBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)boolComboBoxItemBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -148,7 +148,7 @@
             // FisicoComboBox
             // 
             FisicoComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            FisicoComboBox.DataSource = comboBoxItemBindingSource;
+            FisicoComboBox.DataSource = boolComboBoxItemBindingSource;
             FisicoComboBox.DisplayMember = "Text";
             FisicoComboBox.FormattingEnabled = true;
             FisicoComboBox.Location = new Point(12, 247);
@@ -156,10 +156,6 @@
             FisicoComboBox.Size = new Size(320, 23);
             FisicoComboBox.TabIndex = 10;
             FisicoComboBox.ValueMember = "Value";
-            // 
-            // comboBoxItemBindingSource
-            // 
-            comboBoxItemBindingSource.DataSource = typeof(FisicoComboBoxItem);
             // 
             // label5
             // 
@@ -180,6 +176,10 @@
             RegistrarButton.Text = "Registrar";
             RegistrarButton.UseVisualStyleBackColor = true;
             RegistrarButton.Click += RegistrarButton_Click;
+            // 
+            // boolComboBoxItemBindingSource
+            // 
+            boolComboBoxItemBindingSource.DataSource = typeof(BoolComboBoxItem);
             // 
             // VideojuegoForm
             // 
@@ -204,7 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)IdNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)tipoVideojuegoEntidadBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)LanzamientoNumericUpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)comboBoxItemBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)boolComboBoxItemBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,6 +225,6 @@
         private ComboBox FisicoComboBox;
         private Label label5;
         private Button RegistrarButton;
-        private BindingSource comboBoxItemBindingSource;
+        private BindingSource boolComboBoxItemBindingSource;
     }
 }

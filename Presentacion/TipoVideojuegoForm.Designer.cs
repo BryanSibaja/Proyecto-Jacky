@@ -44,7 +44,7 @@
             NombreTextBox.Location = new Point(12, 71);
             NombreTextBox.Name = "NombreTextBox";
             NombreTextBox.Size = new Size(333, 23);
-            NombreTextBox.TabIndex = 0;
+            NombreTextBox.TabIndex = 2;
             // 
             // IdNumericUpDown
             // 
